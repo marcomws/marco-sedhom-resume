@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { SHORT_NAME } from "../../shared/constants.js";
+import { SOCIAL_MEDIA_LINKS } from "../../shared/constants.js";
 
 export default class SocialMedia extends Component {
 
