@@ -16,6 +16,7 @@ $my-name--text-align: center;
 $description-container--display: flex;
 $description-container--flex-flow: row wrap;
 $description-container--margin-bottom: 30px;
+$description-container--justify-content: space-between;
 
 $word--height: 7px;
 $word--line-height: 7px;
@@ -53,6 +54,7 @@ $small--description-container--width: 85%;
   display: $description-container--display;
   flex-flow: $description-container--flex-flow;
   margin-bottom: $description-container--margin-bottom;
+  justify-content: $description-container--justify-content;
 }
 
 .word {
