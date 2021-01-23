@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./styles/style.scss";
 import { useScript } from "./shared/supporting-functions.js";
 import MyName from "./components/my-name.js";

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { LEGAL_NAME } from "../shared/constants.js";
 
 export default class MyName extends Component {
