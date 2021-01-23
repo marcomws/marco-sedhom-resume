@@ -1,18 +1,36 @@
 @import "./common.scss";
 
 body {
-  margin: 0;
-  padding: 20px;
-  font-family: sans-serif;
-  background: $page_background;
+  margin: $page--margin;
+  padding: $page--padding;
+  font-family: $page--font-family;
+  background-color: $page--background-color;
 }
 
-// Small devices (landscape phones, 576px and up to 900)
-@media screen and (min-width: 576px) and (max-width: 900px) { 
-  @import "./small-devices-style.scss";
- }
+.description-container {
+  display: $description-container--display;
+  flex-flow: $description-container--flex-flow;
+  margin-bottom: $description-container--margin-bottom;
+}
 
-// Large devices (desktops, 901px and up)
-@media screen and (min-width: 901px) { 
+.word {
+  height: $word--height;
+  line-height: $word--line-height;
+  margin: $word--margin;
+  padding: $word--padding;
+  background-color: $word--background-color;
+  border-radius: $word--border-radius;
+}
+
+.linkedin-badge {
+  display: $linkedin-badge--display;
+  justify-content: $linkedin-badge--justify-content;
+}
+
+@media screen and (min-width: $small--device--width) and (max-width: calc(var($large--device--width) - 1px)) { 
+  @import "./small-devices-style.scss";
+}
+
+@media screen and (min-width: $large--device--width) { 
   @import "./large-devices-style.scss";
- }
+}

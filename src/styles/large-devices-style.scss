@@ -1,20 +1,16 @@
 .my-resume-page {
-  display: flex;
-  flex-flow: row;
+  display: $my-resume-page--display;
+  flex-flow: $large--my-resume-page--flex-flow;
 }
 
 .main-section {
-  flex: 3;
+  flex: $large--main-section--flex;
 }
 
-.my-name {
-
+.links-section {
+  flex: $large--links-section--flex;
 }
 
-.links-section{
-  flex: 1;
-}
-
-.linkedin-badge {
-
+.description-container {
+  width: $large--description-container--width;
 }

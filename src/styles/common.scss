@@ -1,1 +1,70 @@
-$page_background: #f8f8ff;
+//--- COMMON VARIABLES ---//
+$small--device--width: 576px;
+$large--device--width: 900px;
+
+$page--margin: 0px;
+$page--padding: 20px;
+$page--font-family: sans-serif;
+$page--background-color: #f8f8ff;
+
+$my-resume-page--display: flex;
+
+$my-name--display: flex;
+$my-name--justify-content: start;
+$my-name--text-align: center;
+
+$description-container--display: flex;
+$description-container--flex-flow: row wrap;
+$description-container--margin-bottom: 30px;
+
+$word--height: 7px;
+$word--line-height: 7px;
+$word--margin: 3px;
+$word--padding: 0px 7px;
+$word--background-color: gray;
+$word--border-radius: 7px;
+
+$linkedin-badge--display: flex;
+$linkedin-badge--justify-content: center;
+
+//--- LARGE DEVICE VARIABLES ---//
+$large--my-resume-page--flex-flow: row;
+$large--main-section--flex: 3;
+$large--links-section--flex: 1;
+$large--description-container--width: 75%;
+
+//--- SMALL DEVICE VARIABLES ---//
+$small--my-resume-page--flex-flow: column;
+$small--main-section--flex: auto;
+$small--links-section--flex: auto;
+$small--description-container--width: 85%;
+
+//--- COMMON STYLES ---//
+.my-name {
+  display: $my-name--display;
+  justify-content: $my-name--justify-content;
+
+  > * {
+  text-align: $my-name--text-align !important;
+  }
+}
+
+.description-container {
+  display: $description-container--display;
+  flex-flow: $description-container--flex-flow;
+  margin-bottom: $description-container--margin-bottom;
+}
+
+.word {
+  height: $word--height;
+  line-height: $word--line-height;
+  margin: $word--margin;
+  padding: $word--padding;
+  background-color: $word--background-color;
+  border-radius: $word--border-radius;
+}
+
+.linkedin-badge {
+  display: $linkedin-badge--display;
+  justify-content: $linkedin-badge--justify-content;
+}
