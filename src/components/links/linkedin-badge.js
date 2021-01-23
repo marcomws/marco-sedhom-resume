@@ -1,31 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 
-import { SHORT_NAME } from "../../shared/constants.js";
+export default function LinkedInBadge({shortName}) {
 
-export default class LinkedInBadge extends Component {
-
-  constructor() {
-    super();
-  };
-
-  render() {
-    return (
-      <div className="linkedin-badge">
-        <div 
-          className="LI-profile-badge"
-          data-version="v1"
-          data-size="large"
-          data-locale="en_US"
-          data-type="horizontal"
-          data-theme="light"
-          data-vanity="marco-sedhom">
-          <a
-            className="LI-simple-link"
-            href="https://it.linkedin.com/in/marco-sedhom?trk=profile-badge">
-            { SHORT_NAME }
-          </a>
-        </div>
+  return (
+    <div className="linkedin-badge">
+      <div 
+        className="LI-profile-badge"
+        data-version="v1"
+        data-size="large"
+        data-locale="en_US"
+        data-type="horizontal"
+        data-theme="light"
+        data-vanity="marco-sedhom">
+        <a
+          className="LI-simple-link"
+          target="_blank"
+          href="https://it.linkedin.com/in/marco-sedhom?trk=profile-badge">
+          { shortName }
+        </a>
       </div>
-    );
-  }
+    </div>
+  );
 }

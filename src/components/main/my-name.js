@@ -1,18 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-import { LEGAL_NAME } from "../../shared/constants.js";
+export default function MyName({legalName}) {
 
-export default class MyName extends Component {
-
-  constructor() {
-    super();
-  };
-
-  render() {
-    return (
-      <div className="my-name">
-        <h1>{ LEGAL_NAME }</h1>
-      </div>
-    );
-  }
+  return (
+    <div className="my-name">
+      <h1>{ legalName }</h1>
+    </div>
+  );
 }
