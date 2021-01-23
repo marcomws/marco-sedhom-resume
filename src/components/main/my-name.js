@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { LEGAL_NAME } from "../shared/constants.js";
+import { LEGAL_NAME } from "../../shared/constants.js";
 
 export default class MyName extends Component {
 
@@ -10,7 +10,7 @@ export default class MyName extends Component {
 
   render() {
     return (
-      <div>
+      <div className="my-name">
         <h1>{ LEGAL_NAME }</h1>
       </div>
     );

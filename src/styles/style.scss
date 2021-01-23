@@ -7,16 +7,12 @@ body {
   background: $page_background;
 }
 
-.my-resume-page {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
+// Small devices (landscape phones, 576px and up to 900)
+@media screen and (min-width: 576px) and (max-width: 900px) { 
+  @import "./small-devices-style.scss";
+ }
 
-  MyName {
-
-  }
-
-  LinkedInBadge {
-
-  }
-}
+// Large devices (desktops, 901px and up)
+@media screen and (min-width: 901px) { 
+  @import "./large-devices-style.scss";
+ }

@@ -2,8 +2,8 @@ import React from "react";
 
 import "./styles/style.scss";
 import { useScript } from "./shared/supporting-functions.js";
-import MyName from "./components/my-name.js";
-import LinkedInBadge from "./components/linkedin-badge.js";
+import MainSection from "./components/main-section.js";
+import LinksSection from "./components/links-section.js";
 
 export default function App() {
   useScript("https://platform.linkedin.com/badges/js/profile.js", [
@@ -13,8 +13,8 @@ export default function App() {
 
   return (
     <div className="my-resume-page">
-      <MyName/>
-      <LinkedInBadge/>
+      <MainSection/>
+      <LinksSection/>
     </div>
   );
 }
