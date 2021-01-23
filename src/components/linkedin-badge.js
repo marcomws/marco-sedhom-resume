@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import SHORT_NAME from "../App.js";
+import React, { Component } from "react";
+import { SHORT_NAME } from "../shared/constants.js";
 
 export default class LinkedInBadge extends Component {
 
@@ -10,16 +10,18 @@ export default class LinkedInBadge extends Component {
   render() {
     return (
       <div
-        class="LI-profile-badge"
+        className="LI-profile-badge"
         data-version="v1"
-        data-size="medium"
+        data-size="large"
         data-locale="en_US"
-        data-type="vertical"
+        data-type="horizontal"
         data-theme="light"
         data-vanity="marco-sedhom">
-          <a class="LI-simple-link" href='https://it.linkedin.com/in/marco-sedhom?trk=profile-badge'>
-            {{ SHORT_NAME }}
-          </a>
+        <a
+          className="LI-simple-link"
+          href="https://it.linkedin.com/in/marco-sedhom?trk=profile-badge">
+          { SHORT_NAME }
+        </a>
       </div>
     );
   }
