@@ -25,6 +25,7 @@ export default class LinkedInBadge extends Component {
             { SHORT_NAME }
           </a>
         </div>
+        <img src="../../assets/ico/facebook-ico.webp"/>
       </div>
     );
   }
