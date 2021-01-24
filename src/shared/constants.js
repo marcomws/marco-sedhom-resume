@@ -7,21 +7,25 @@ export const SOCIAL_MEDIA_LINKS = [
   {
     name: "facebook",
     link: "http://www.facebook.com",
-    ico: ""
+    ico: "",
+    alt: "fb"
   },
   {
     name: "instagram",
     link: "https://www.instagram.com",
-    ico: ""
+    ico: "",
+    alt: "ig"
   },
   {
     name: "github",
     link: "https://github.com",
-    ico: ""
+    ico: "",
+    alt: "git"
   },
   {
     name: "telegram",
     link: "https://telegram.org",
-    ico: ""
+    ico: "",
+    alt: "tlg"
   },
 ];

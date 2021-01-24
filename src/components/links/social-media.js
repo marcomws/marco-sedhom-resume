@@ -6,13 +6,15 @@ import GlobalPopUp from "../../shared/components/global-popup.js";
 export default class SocialMedia extends Component {
   links;
   popupMsg;
-  popupHandler;
+  popupHandler = (link) => window.open(link, '_blank');
+  popupHandlerLink;
   popupIsVisibile = false;
   hidePopup = () => this.popupIsVisibile = false;
   showPopup = (linkName, link) => {
     this.popupIsVisibile = true;
     this.popupMsg = `We will redirect you to ${linkName} website, confirm?`;
-    this.popupHandler = window.open(link, '_blank');;
+    this.popupHandlerLink = link;
+    console.log("hi marcolino");
   };
   
   constructor() {
@@ -23,24 +25,25 @@ export default class SocialMedia extends Component {
     return (
       <div className="social-media">
         {
-          this.props.links.map(l =>
+          this.props.links.map((l, k) =>
             (
               <GlobalImage
-                onClickEmitter={ this.showPopup(l.name, l.link) }
+                key={k}
+                onClickEmitter={ () => this.showPopup(l.name, l.link) }
                 src={ l.ico }
-                alt={ l.name }>
+                alt={ l.alt }>
               </GlobalImage>
             )
           )
         }
         {
-          this.popupIsVisibile && (
+          this.popupIsVisibile ? (
             <GlobalPopUp
               popupMsg={ this.popupMsg }
-              closeEmitter={ this.hidePopup }
-              ctaEmitter={ this.popupHandler }>
+              closeEmitter={ () => this.hidePopup }
+              ctaEmitter={ () => this.popupHandler(this.popupHandlerLink) }>
             </GlobalPopUp>
-          )
+          ) : null
         }
       </div>
     );

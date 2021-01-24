@@ -47,13 +47,24 @@ $small--description-container--width: 85%;
   border-radius: 7px;
 }
 
+.links-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+}
+
 .linkedin-badge {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .social-media {
-
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 20px 0px;
+  width: 100%;
 }
 
 .popup-modal {
@@ -84,9 +95,11 @@ $small--description-container--width: 85%;
   height: 35px;
   letter-spacing: 0.2px;
   text-align: center;
-  width: 109px;
+  width: 100px;
 }
 
 .shared-image {
-
+  margin: 5px;
+  border: solid thin;
+  border-radius: 1px;
 }

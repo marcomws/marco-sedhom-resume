@@ -9,7 +9,7 @@ export default function DescriptionContainer({wordsLength, minChars = 1, maxChar
   return (
     <div className="description-container">
       {
-        words.map(w => <span className="word" style={{minWidth: w + "px"}}></span>)
+        words.map((w, k) => <span key={k} className="word" style={{minWidth: w + "px"}}></span>)
       }
     </div>
   );
