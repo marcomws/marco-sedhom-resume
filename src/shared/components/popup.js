@@ -5,8 +5,12 @@ export default function PopUp({popupMsg, closeEmitter, ctaEmitter, ctaCaption="O
     <div className="popup-modal">
       <div className="popup-content">
         <span className="popup-close" onClick={ closeEmitter }><b>&times;</b></span>
-        <p>{ popupMsg }</p>
-        <button onClick={ ctaEmitter }>{ ctaCaption }</button>
+
+        <p className="popup-text">{ popupMsg }</p>
+        
+        <div className="standard-btn" onClick={ ctaEmitter }>
+          <button>{ ctaCaption }</button>
+        </div>
       </div>
     </div>
   );

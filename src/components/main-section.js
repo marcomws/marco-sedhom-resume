@@ -14,12 +14,7 @@ export default class MainSection extends Component {
     return (
       <div className="main-section">
         <MyName legalName={ LEGAL_NAME } />
-
-        <DescriptionContainer
-          wordsLength={ DESCRIPTION_WORDS_LENGTH }
-          minChars={1}
-          maxChars={50}
-        />
+        <DescriptionContainer wordsLength={ DESCRIPTION_WORDS_LENGTH } />
       </div>
     );
   }

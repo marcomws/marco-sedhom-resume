@@ -9,25 +9,6 @@ $page--background-color: #f8f8ff;
 
 $my-resume-page--display: flex;
 
-$my-name--display: flex;
-$my-name--justify-content: start;
-$my-name--text-align: center;
-
-$description-container--display: flex;
-$description-container--flex-flow: row wrap;
-$description-container--margin-bottom: 30px;
-$description-container--justify-content: space-between;
-
-$word--height: 7px;
-$word--line-height: 7px;
-$word--margin: 3px;
-$word--padding: 0px 7px;
-$word--background-color: gray;
-$word--border-radius: 7px;
-
-$linkedin-badge--display: flex;
-$linkedin-badge--justify-content: center;
-
 //--- LARGE DEVICE VARIABLES ---//
 $large--my-resume-page--flex-flow: row;
 $large--main-section--flex: 3;
@@ -42,31 +23,66 @@ $small--description-container--width: 85%;
 
 //--- COMMON STYLES ---//
 .my-name {
-  display: $my-name--display;
-  justify-content: $my-name--justify-content;
+  display: flex;
+  justify-content: start;
 
   > * {
-  text-align: $my-name--text-align;
+  text-align: center;
   }
 }
 
 .description-container {
-  display: $description-container--display;
-  flex-flow: $description-container--flex-flow;
-  margin-bottom: $description-container--margin-bottom;
-  justify-content: $description-container--justify-content;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 30px;
+  justify-content: space-between;
 }
 
 .word {
-  height: $word--height;
-  line-height: $word--line-height;
-  margin: $word--margin;
-  padding: $word--padding;
-  background-color: $word--background-color;
-  border-radius: $word--border-radius;
+  height: 7px;
+  line-height: 7px;
+  margin: 3px;
+  padding: 0px 7px;
+  background-color: gray;
+  border-radius: 7px;
 }
 
 .linkedin-badge {
-  display: $linkedin-badge--display;
-  justify-content: $linkedin-badge--justify-content;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media {
+
+}
+
+.popup-modal {
+
+}
+
+.popup-content {
+
+}
+
+.popup-close {
+
+}
+
+.popup-text {
+
+}
+
+.standard-btn {
+  font-size: 14px;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 4px;
+  height: 35px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  width: 109px;
+}
+
+.shared-image {
+
 }
