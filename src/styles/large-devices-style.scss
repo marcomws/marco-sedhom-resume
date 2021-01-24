@@ -9,6 +9,10 @@
 
 .links-section {
   flex: $large--links-section--flex;
+
+  .description-container {
+    margin-left: $large--description-container--margin-left;
+  }
 }
 
 .description-container {

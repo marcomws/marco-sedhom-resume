@@ -15,7 +15,7 @@ export default function LinkedInBadge({shortName}) {
           className="LI-simple-link"
           target="_blank"
           href="https://it.linkedin.com/in/marco-sedhom?trk=profile-badge">
-          { shortName }
+          { shortName } - linkedin
         </a>
       </div>
     </div>
