@@ -1,24 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class PopUp extends Component {
-  closeEmitter;
-  popupMsg;
-  
-  constructor() {
-    super();
-
-    this.closeEmitter = this.props.toggle;
-    this.popupMsg = this.props.popupMsg;
-  };
-
-  render() {
-    return (
-      <div className="modal-popup">
-        <div className="popup_content">
-          <span className="close" onClick={this.closeEmitter}><b>&times;</b></span>
-          <p>{ this.popupMsg }</p>
-        </div>
+export default function PopUp({popupMsg, closeEmitter, ctaEmitter, ctaCaption="OK"}) {
+  return (
+    <div className="popup-modal">
+      <div className="popup-content">
+        <span className="popup-close" onClick={ closeEmitter }><b>&times;</b></span>
+        <p>{ popupMsg }</p>
+        <button onClick={ ctaEmitter }>{ ctaCaption }</button>
       </div>
-    );
-  }
+    </div>
+  );
 }

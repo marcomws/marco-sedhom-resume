@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function LinkedInBadge({shortName}) {
-
   return (
     <div className="linkedin-badge">
       <div 
