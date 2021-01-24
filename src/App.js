@@ -1,11 +1,20 @@
 import React from "react";
-import "./style.css";
+
+import "./styles/style.scss";
+import { useScript } from "./shared/supporting-functions.js";
+import MainSection from "./components/main-section.js";
+import LinksSection from "./components/links-section.js";
 
 export default function App() {
+  useScript("https://platform.linkedin.com/badges/js/profile.js", [
+    { key: "async", value: true },
+    { key: "defer", value: true },
+  ]);
+
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+    <div className="my-resume-page">
+      <MainSection/>
+      <LinksSection/>
     </div>
   );
 }

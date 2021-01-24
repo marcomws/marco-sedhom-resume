@@ -1,0 +1,16 @@
+.my-resume-page {
+  display: $my-resume-page--display;
+  flex-flow: $small--my-resume-page--flex-flow;
+}
+
+.main-section {
+  flex: $small--main-section--flex;
+}
+
+.links-section {
+  flex: $small--links-section--flex;
+}
+
+.description-container {
+  width: $small--description-container--width;
+}

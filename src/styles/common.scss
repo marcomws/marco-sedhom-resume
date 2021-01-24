@@ -1,0 +1,138 @@
+//--- COMMON VARIABLES ---//
+$small--device--width: 576px;
+$large--device--width: 900px;
+
+$page--margin: 0px;
+$page--padding: 20px;
+$page--font-family: sans-serif;
+$page--background-color: #f8f8ff;
+
+$my-resume-page--display: flex;
+
+//--- LARGE DEVICE VARIABLES ---//
+$large--my-resume-page--flex-flow: row;
+$large--main-section--flex: 3;
+$large--links-section--flex: 1;
+$large--description-container--width: 75%;
+$large--description-container--margin-left: 12.5%;
+
+//--- SMALL DEVICE VARIABLES ---//
+$small--my-resume-page--flex-flow: column;
+$small--main-section--flex: auto;
+$small--links-section--flex: auto;
+$small--description-container--width: 85%;
+
+//--- COMMON STYLES ---//
+.my-name {
+  display: flex;
+  justify-content: start;
+
+  > * {
+  text-align: center;
+  }
+}
+
+.description-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 30px;
+  justify-content: space-between;
+
+  > h3 {
+    width: 100%;
+  }
+}
+
+.word {
+  height: 7px;
+  line-height: 7px;
+  margin: 3px;
+  padding: 0px 7px;
+  background-color: gray;
+  border-radius: 7px;
+}
+
+.links-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+}
+
+.linkedin-badge {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-media {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.popup-modal-close {
+  display: none;
+}
+
+.popup-modal-open {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.popup-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+  :hover, focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.popup-text {
+  height: 100%;
+}
+
+.standard-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  opacity: 0.7;
+
+  :hover {
+    opacity: 1;
+  }
+}
+
+.shared-image {
+  margin: 5px;
+  padding: 5px;
+  border: solid thin;
+  border-radius: 1px;
+  height: 20px;
+}
