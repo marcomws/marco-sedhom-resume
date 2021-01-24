@@ -4,21 +4,34 @@ import GlobalImage from "../../shared/components/global-image.js";
 import GlobalPopUp from "../../shared/components/global-popup.js";
 
 export default class SocialMedia extends Component {
-  links;
-  popupMsg;
-  popupHandler = (link) => window.open(link, '_blank');
-  popupHandlerLink;
-  popupIsVisibile = false;
-  hidePopup = () => this.popupIsVisibile = false;
-  showPopup = (linkName, link) => {
-    this.popupIsVisibile = true;
-    this.popupMsg = `We will redirect you to ${linkName} website, confirm?`;
-    this.popupHandlerLink = link;
-    console.log("hi marcolino");
-  };
   
   constructor() {
     super();
+    this.state = {
+      popupIsVisibile: false,
+      popupHandlerLink: "",
+      popupMsg: "",
+    };
+
+    this.showPopup = this.showPopup.bind(this);
+    this.hidePopup = this.hidePopup.bind(this);
+    this.popupHandler = this.popupHandler.bind(this);
+  };
+
+  showPopup = (linkName, link) => {
+    this.setState({
+      ...this.state,
+      popupIsVisibile: true,
+      popupHandlerLink: link,
+      popupMsg: `We will redirect you to <b>${linkName}</b> website, confirm?`
+      });
+  };
+
+  hidePopup = () => this.setState({...this.state, popupIsVisibile: false});
+
+  popupHandler = (link) => {
+    window.open(link, '_blank');
+    this.hidePopup();
   };
 
   render() {
@@ -37,15 +50,15 @@ export default class SocialMedia extends Component {
           )
         }
         {
-          this.popupIsVisibile ? (
-            <GlobalPopUp
-              popupMsg={ this.popupMsg }
-              closeEmitter={ () => this.hidePopup }
-              ctaEmitter={ () => this.popupHandler(this.popupHandlerLink) }>
-            </GlobalPopUp>
-          ) : null
+          <GlobalPopUp
+            isVisibile={ this.state.popupIsVisibile }
+            popupMsg={ this.state.popupMsg }
+            closeEmitter={ () => this.hidePopup() }
+            ctaEmitter={ () => this.popupHandler(this.state.popupHandlerLink) }>
+          </GlobalPopUp>
         }
       </div>
+      
     );
   }
 }

@@ -20,12 +20,12 @@ export const SOCIAL_MEDIA_LINKS = [
     name: "github",
     link: "https://github.com",
     ico: "",
-    alt: "git"
+    alt: "gi"
   },
   {
     name: "telegram",
     link: "https://telegram.org",
     ico: "",
-    alt: "tlg"
+    alt: "tg"
   },
 ];
