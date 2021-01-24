@@ -8,9 +8,7 @@ export default function GlobalPopUp({isVisibile, popupMsg, closeEmitter, ctaEmit
 
         <p className="popup-text" dangerouslySetInnerHTML={{ __html: popupMsg }}></p>
         
-        <div className="standard-btn" onClick={ ctaEmitter }>
-          <button>{ ctaCaption }</button>
-        </div>
+        <button className="standard-btn" onClick={ ctaEmitter }>{ ctaCaption }</button>
       </div>
     </div>
   );
