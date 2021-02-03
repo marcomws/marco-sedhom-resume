@@ -9,18 +9,18 @@ $page--background-color: #f8f8ff;
 
 $my-resume-page--display: flex;
 
+
 //--- LARGE DEVICE VARIABLES ---//
 $large--my-resume-page--flex-flow: row;
 $large--main-section--flex: 3;
 $large--links-section--flex: 1;
-$large--description-container--width: 75%;
-$large--description-container--margin-left: 12.5%;
+$large--description-container--width: 90%;
+$large--description-container--margin-left: 5%;
 
 //--- SMALL DEVICE VARIABLES ---//
 $small--my-resume-page--flex-flow: column;
 $small--main-section--flex: auto;
 $small--links-section--flex: auto;
-$small--description-container--width: 85%;
 
 //--- COMMON STYLES ---//
 .my-name {
