@@ -1,16 +1,16 @@
-@import "./common.scss";
+@import './common.scss';
 
 body {
-  margin: $page--margin;
+  margin: $page--margin !important;
   padding: $page--padding;
   font-family: $page--font-family;
   background-color: $page--background-color;
 }
 
-@media screen and (min-width: $small--device--width) and (max-width: calc(var($large--device--width) - 1px)) { 
-  @import "./small-devices-style.scss";
+@media screen and (min-width: $small--device--width) and (max-width: calc(var($large--device--width) - 1px)) {
+  @import './small-devices-style.scss';
 }
 
-@media screen and (min-width: $large--device--width) { 
-  @import "./large-devices-style.scss";
+@media screen and (min-width: $large--device--width) {
+  @import './large-devices-style.scss';
 }
